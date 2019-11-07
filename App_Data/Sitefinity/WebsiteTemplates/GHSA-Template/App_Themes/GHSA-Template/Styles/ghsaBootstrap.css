@@ -1,0 +1,455 @@
+﻿/* DEV NOTE: cascading over some basic Bootstrap elements to get the styles the way we want them quickly; final site will use mixins to cut down on the repetition & clean this up  */
+
+/* GHSA Navbar - Branding & Logo elements */
+/* -------------------------------------------------- */
+.brushStroke {
+	background-image:url(../images/ghsa-HeaderBrushStroke.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding: 0;
+}
+.navbar {
+	margin-bottom: 0px;
+}
+.navbar-default {
+	background-color: #ffffff;
+}
+.navbar-header {
+	background-image:url(../images/ghsa-HeaderLogo.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+a.navbar-brand {
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+	font-size: 45px;
+	font-weight: normal;
+	color: #ff6633;
+}
+.navbar-brand {
+	line-height: normal;
+	height: 95px;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ff4000;
+  background-color: transparent;
+}
+.navbar > .container .navbar-brand, 
+.navbar > .container-fluid .navbar-brand {
+	margin-left: 105px;
+}
+.navbar-default .navbar-brand {
+	color:#ff6633;
+}
+
+/* GHSA Navbar Search */
+/* -------------------------------------------------- */
+.navbar-right {
+	margin-right: 0px;
+}
+.navbar-form {
+	padding-top: 25px;
+	display: none;
+}
+
+/* GHSA Navbar Menu - Navigation Menu Items */
+/* -------------------------------------------------- */
+.navbar-nav {
+	float: none;
+}
+.navbar-GSHA, ul.navbar-GHSA {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #8a8a7a;
+	text-transform: uppercase;
+	border-top: #bdbdae 1px solid;
+	border-bottom: #bdbdae 1px solid;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.navbar-default, 
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+	border: none;
+}
+.navbar-default .navbar-nav > li > a {
+  	color: #8a8a7a;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border-right: #bdbdae 1px solid;
+}
+.navbar-default .navbar-nav > li:last-child > a {
+	border-right: none;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  	border-bottom: 10px solid #2acaff;
+	padding-bottom: 10px;
+  	background-color: transparent;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+	border-bottom: 10px solid #2acaff;
+	border-right: 1px solid #bdbdae;
+	padding-bottom: 10px;
+}
+
+/* GHSA Dropdown - Dropdown Menus */
+/* -------------------------------------------------- */
+.dropdown-GHSA {
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+	color: #ff6633;
+	text-transform: uppercase;
+}
+.dropdown-menu .divider {
+	background-color: #b3b3ac;
+}
+.dropdown-menu > li > a {
+	color: #666659;
+	text-transform: none;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  	color: #2acaff;
+ 	text-decoration: none;
+ 	background-color: #f5f5f5;
+ 	border-left: 10px solid #2acaff;
+ 	padding-left: 10px;
+}
+
+/* GHSA Homepage Graphics - Carousel, Super Menu, What Is GHSA box, Events & Milestones */
+/* -------------------------------------------------- */
+.carousel {
+	margin-top: 7px;
+}
+.carousel-inner {
+	background-color: #686859;
+}
+.carousel-what-is-GHSA {
+	background-color: #686859;
+	color: #ffffff;
+	padding-bottom: 10px;
+}
+.carousel-what-is-GHSA h1 {
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+	font-size: 36px;
+	font-weight: normal; 
+	margin-top: 5px;
+}
+.carousel-what-is-GHSA p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+}
+.carousel-what-is-GHSA .btn-primary {
+	background-color: #686859;
+	border-color: #ffffff;
+}
+.carousel-what-is-GHSA .btn-primary:hover,
+.carousel-what-is-GHSA .btn-primary:focus,
+.carousel-what-is-GHSA .btn-primary.focus,
+.carousel-what-is-GHSA .btn-primary:active,
+.carousel-what-is-GHSA .btn-primary.active,
+.carousel-what-is-GHSA .open > .dropdown-toggle.btn-primary {
+ 	color: #ffffff;
+ 	background-color: #575748;
+ 	border-color: #cccccc;
+}
+.events-milestones-GHSA {
+	background-color: #dfdfd0;
+}
+.events-milestones-GHSA div.col-md-10 {
+	padding-left: 0;
+	padding-right: 0;
+}
+.events-milestones-GHSA h2 {
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+	font-size: 30px;
+	color: #ff6633;
+	letter-spacing: 50%;
+	text-transform:uppercase;
+}
+.events-milestones-GHSA p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #555555;
+	line-height: 140%;
+}
+.events-milestones-box {
+	background-color: #ffffff;
+	display: block;
+	height: auto;
+	margin-bottom: 20px;
+}
+.events-milestones-box img {
+	width: 100%;
+	margin: 10px 0;
+}
+.events-milestones-box a {}
+.events-milestones-GHSA div.col-sm-4 {
+	border-left: 10px solid #dfdfd0;
+	border-right: 10px solid #dfdfd0;
+}
+
+/* GHSA Footer */
+/* -------------------------------------------------- */
+.footer-GHSA {
+	margin-top: 10px;
+	border-top: 10px solid #686859;
+	height: 150px;
+	padding-left: 0;
+	padding-right: 0;
+	background-image:url(../images/ghsa-FooterBrushStroke.png);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+.footer-GHSA p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.footer-GHSA p a {
+	color: #8a8a7a;
+}
+.footer-GHSA-sm {
+	border-top: 1px solid #686859;
+	margin-top: 5px;
+	padding-left: 0px;
+}
+.footer-title {
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+	font-size: 32px;
+	color: #ff6633;
+	display: block;
+	float: left;
+	margin-top: 0;
+}
+.footer-left-GHSA {
+	margin-top: 5px;
+	/*border-top: 1px solid #686859;*/
+	padding-top: 15px;
+	padding-left: 0px;
+}
+.footer-left-GHSA ul {
+	margin: 0;
+	padding: 0;
+}
+.footer-left-GHSA ul li {
+	display: inline;
+}
+.footer-right-GHSA {
+	margin-top: 5px;
+	/*border-top: 1px solid #686859;*/
+	padding-top: 15px;
+}
+.footer-right-GHSA ul li {
+	display: inline;
+}
+.footer-right-GSHA-image {
+	display: block;
+	float: right;
+}
+.copyright {
+	font-size: 12px;
+	color: #b3b3ac;
+}
+
+/* GHSA Social Media Icons */
+/* -------------------------------------------------- */
+.ghsa-SocalMedia {}
+.ghsa-SocalMedia > li > a {
+	display: block;
+	float: left;
+	height: 32px;
+	width: 32px;
+	margin: 2px 7px;
+}
+.ghsa-SocalMedia > li > a > span {
+	display: none;
+}
+.facebook-Icon {
+	background-image: url(../images/facebook-icon_sm.png);
+	background-position: top left;
+}
+.twitter-Icon {
+	background-image: url(../images/twitter-icon_sm.png);
+	background-position: top left;
+}
+.linkedin-Icon {
+	background-image: url(../images/linkedin-icon_sm.png);
+	background-position: top left;
+}
+.email-Icon {
+	background-image: url(../images/email-icon_sm.png);
+	background-position: top left;
+}
+.rss-Icon {
+	background-image: url(../images/rss-icon_sm.png);
+	background-position: top left;
+}
+.youtube-Icon {
+	background-image: url(../images/youtube-icon_sm.png);
+	background-position: top left;
+}
+.facebook-Icon:hover, .facebook-Icon:active,
+.twitter-Icon:hover, .twitter-Icon:active,
+.linkedin-Icon:hover, .linkedin-Icon:active,
+.email-Icon:hover, .email-Icon:active,
+.rss-Icon:hover, .rss-Icon:active,
+.youtube-Icon:hover, .youtube-Icon:active
+{
+	background-position: bottom left;
+}
+
+/* GHSA Main-Page - Main-Page Layout Items */
+/* -------------------------------------------------- */
+.mainpage-GHSA-content {
+	margin-top: 5px;
+	border-top: 5px solid #a1a195;
+}
+.mainpage-GHSA-content div.col-md-10 {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.mainpage-GHSA-content h2 {
+	color: #ff6633;
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+	font-size: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b3b3ac;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.mainpage-GHSA-content h3 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	margin-top: 0;
+}
+.mainpage-GHSA-content p {
+	color: #555555;
+	margin-top: 10px;
+	line-height: 140%;
+}
+.mainpage-GHSA-content img {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+/* GHSA Sub-Page - Sub-Page Layout Items */
+/* -------------------------------------------------- */
+.subpage-GHSA-header {
+	background: #79796a;
+	margin-top: 8px;
+	margin-bottom: 5px;
+}
+.subpage-GHSA-header h1 {
+	color: #ffffff;
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+}
+.subpage-GHSA-header p {
+	color: #ffffff;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+.subpage-GHSA-header img {
+	width: 100%;	
+}
+.subpage-GHSA-titleImg {
+	background-image:url(../images/subpage-Background.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+hr {
+	border-color: #b3b3ac;
+}
+.subpage-GHSA-content {
+	border-top: 5px solid #a1a195;
+}
+.subpage-GHSA-content h2 {
+	color: #ff6633;
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+	font-size: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #b3b3ac;
+	text-transform: uppercase;
+}
+.subpage-GHSA-content h3 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 22px;
+}
+.subpage-GHSA-content img {
+	width: 100%;
+	margin: 15px 0;
+}
+
+/* Responsive Header and Foooter Items */
+/* -------------------------------------------------- */
+@media (max-width: 1205px) {
+	.col-md-10 	{width: 90%;}
+	.col-md-offset-1 {margin-left: 5%;}
+}
+@media (max-width: 1115px) {
+	.col-md-10 	{width: 96%;}
+	.col-md-offset-1 {margin-left: 2%;}
+	.navbar-default .navbar-nav > li > a {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.navbar-GSHA, ul.navbar-GHSA {
+		font-size: 12px;
+	}
+	
+}
+@media (max-width: 767px) {
+	.brushStroke {
+		background-position: right -44px;
+	}
+	.navbar-header {
+		background-image:none;
+		border-bottom: 1px solid #cccccc;
+	}
+	a.navbar-brand {
+		font-size: 18px;
+	}
+	.navbar-brand {
+		font-size: 18px;
+		line-height: 20px;
+		height: 50px;
+	}
+	.navbar > .container .navbar-brand, 
+	.navbar > .container-fluid .navbar-brand {
+		margin-left: 5px;
+	}
+	.navbar-form {
+		padding-top: 0;
+		margin-top: 0;
+	}
+	.navbar-default .navbar-nav > li > a {
+		padding: 10px 25px;
+	}
+	.footer-GHSA {
+		background-image: none;
+	}
+	.footer-title {
+		font-size: 18px;
+	}
+	.footer-right-GSHA-image {
+		display: none;
+	}
+	.ghsa-SocalMedia > li > a {
+		float: none;
+	}
+	.ghsa-SocalMedia > li > a > span {
+		display: inline;
+		margin-left: 37px;
+		padding-top: 10px;
+		color: #555555;
+	}
+}

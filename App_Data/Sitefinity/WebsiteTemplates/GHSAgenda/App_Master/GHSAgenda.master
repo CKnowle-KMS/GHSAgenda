@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" %>
+
+<%@ Register Assembly="Telerik.Sitefinity" Namespace="Telerik.Sitefinity.Web.UI"
+    TagPrefix="sf" %>
+<sf:ResourceLinks ID="resLinks" runat="server">
+    <sf:ResourceFile JavaScriptLibrary="JQuery" />
+</sf:ResourceLinks>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Assets/font-awesome/css/font-awesome.min.css">
+
+    <sf:ResourceLinks ID="resourcesLinks" runat="server">
+        <sf:ResourceFile JavaScriptLibrary="KendoAll" />
+    </sf:ResourceLinks>
+    <script>
+        (function () {
+            var cx = '008132220247654401494:phxmj5j1bpc';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        })();
+        if (top.frames.length != 0)
+            top.location = self.document.location;
+    </script>
+    <meta name="google-site-verification" content="4MS8Zd-y96S7I3EltJVP3666gBQWxkz1yKrKHHEqU3c" />
+</head>
+<body class="main-body">
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" EnableHandlerDetection="false" runat="server">
+    </telerik:RadScriptManager>
+    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+        <ProgressTemplate>
+            <div class="progIndicatorBG">
+                <div style="background-color: Gray;">
+                    Processing request...</div>
+                <br />
+                <asp:Image ID="Image1" SkinID="progressIndicator" runat="server" ImageUrl="~/Assets/Images/progress-2.gif"
+                    BorderWidth="0" class="progIndicator" />
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    <div id="wrapper">
+        <div id="header">
+            <div class="mainSearch">
+                <gcse:searchbox-only></gcse:searchbox-only>
+            </div>
+            <asp:ContentPlaceHolder ID="headerPlaceholder" runat="server" />
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="contentPlaceholder" runat="server" />
+        </div>
+        <div id="footer">
+            <asp:ContentPlaceHolder ID="footerPlaceholder" runat="server" />
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript">
+
+
+        $(function () {
+            $(".accordion").accordion({
+                collapsible: true,
+                animate: false
+            });
+            $("#tabs").tabs();
+        });
+
+        $(".kendoTabstrip").kendoTabStrip({
+            animation: {
+                open: {
+                    effects: "none"
+                }
+            }
+        });
+
+
+        $(".tabstrip").children(".k-tabstrip-items").find(".k-link").click(function (e) {
+            e.preventDefault();
+        });
+
+
+        $(".caption").wrap("<div class='captionContainer'></div>");
+        $(".captionContainer img").each(function () {
+            var $this = $(this);
+            var title = $this.attr("alt");
+            var styleVaule = $this.attr("style");
+            var widthVaule = $this.attr("width");
+
+            $this.removeAttr("style");
+            $this.closest('.captionContainer').attr("style", styleVaule).width(widthVaule);
+            $this.after('<div class="img-caption">' + title + '</div>');
+        });
+
+
+        $('img').removeAttr("title");
+
+        var currentHost = window.location.hostname;
+
+        $("a[href^='http']").not("[href*='" + currentHost + "']").each(function () {
+
+
+            $(this).attr("target", "_blank");
+
+
+            if (!$(this).children("img").length) {
+                $(this).not("[href*='.gov']").addClass("externalLink");
+            }
+        });
+
+        $("a[href^='/docs']").attr("target", "_blank");
+
+        $("a.sfdownloadTitle:contains('[Flash]')").siblings("div.sfMetaInfo").children("span.sfInfo").each(function () {
+            $(this).text("Flash");
+       });
+
+    </script>
+</body>
+<head>
+    <meta http-equiv="Pragma" content="no-cache" />
+</head>
+</html>

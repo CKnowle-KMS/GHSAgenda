@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* GHSA Leaflet CSS - Map Styles */
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Leaflet Popup*/
+.leaflet-popup-content-wrapper {
+	border-radius: 0px;
+	box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.5);
+	background-color: rgba(255,255,255,0.95);
+}
+.leaflet-popup-content {
+	padding: 0 5px 10px;
+	min-width: 100px;
+	max-width: 200px;
+	color: #666;
+}
+.leaflet-popup-content h2 {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 22px;
+	font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, "Verdana Ref", sans-serif;
+	color: #ff6633;
+	line-height: 20px;
+	font-weight: bold;
+	/*
+	padding-bottom: 5px; 
+	border-bottom: solid 1px #ccc; 
+	*/
+}
+.leaflet-popup-content h2 a {
+	text-decoration: none;
+	color: #336799;
+}
+.leaflet-popup-content h2 a:hover {
+	color: #73b6e6;
+}
+.leaflet-control-attribution {
+	display: none;
+}
+.leaflet-popup-content ul.countryInfo li {
+	margin-left: 0 !important;
+	list-style-type: none !important;
+}
+.leaflet-popup-content ul.countryInfo {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	font-size: 15px;
+	color: #999;
+}
+.leaflet-popup-content ul.countryInfo li .label {
+	line-height: 16px;
+	padding-top: 5px;
+}
+.leaflet-popup-content ul.countryInfo li .data {
+	font-size: 48px;
+	color: #f26522;
+	line-height: 52px;
+	letter-spacing: -.045em;
+	font-weight: bold;
+}
+.leaflet-popup-content ul.countryInfo li .data span {
+	font-size: 30px;
+	letter-spacing: -.045em;
+	color: #aaa;
+}
+
+/* Map Legend and Key Styles */
+ul.mapKeyList {
+	margin: 0;
+	padding: 5px 0 0 0;
+	color: #ffffff;
+}
+ul.mapKeyList li {
+	display: inline-block;
+	float: left;
+	width: 32%;
+	padding: 0 5px 10px 0;
+	margin: 10px 0;
+}
+div.keyOrangeBox {
+	display: block;
+	float: left;
+	height: 20px;
+	width: 20px;
+	background: #f7abaa;
+	border: 1px solid #333333;
+	margin: 0 10px 0 0;
+}
+div.keyGreenBox {
+	display: block;
+	float: left;
+	height: 20px;
+	width: 20px;
+	background: #b9dcc3;
+	border: 1px solid #333333;
+	margin: 0 10px 0 0;
+}
+div.keyPurpleBox {
+	display: block;
+	float: left;
+	height: 20px;
+	width: 20px;
+	background: #ccacd4;
+	border: 1px solid #333333;
+	margin: 0 10px 0 0;
+}
+#map {
+	width: 100%;
+	height: 400px;
+	margin: 10px auto 0;
+    border: solid 5px #ffdfbf;
+}
+#mapLegend p {
+	color: #ffffff;
+	float: right;
+	margin-top: 10px;
+	font-size: 12px;
+}
+/*
+.leaflet-left .leaflet-control {
+    position: relative;
+    top: 80px;
+}
+*/
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Map Container*/
+.mapContainer, .ghsaMap-Container {
+	background-color: #686859;
+	margin-top: 8px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Map Text Content*/
+.mapContainer h1 {
+	font-size: 1em;
+	font-weight: bold;
+	background-color: #686859;
+	margin-top: 10px;
+}
+.mapContainer .mapFooter {
+	padding: 15px;
+	overflow: hidden;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Map Country List*/
+.mapContainer .toggle_text {
+	text-align: right;
+	display: block;
+	width: 100%;
+	font-weight: normal;
+}
+.mapContainer .countryList {
+	overflow: hidden;
+	border-bottom: solid 1px #ccc;
+	padding: 10px 25px 30px;
+}
+.mapContainer .countryList ul {
+	float: left;
+	margin-left: 0 !important;
+}
+.mapContainer .countryList li {
+	width: 300px;
+	display: block;
+	padding: 0px 10px 20px;
+}
